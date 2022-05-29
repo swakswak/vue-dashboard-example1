@@ -2,7 +2,7 @@
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
-        <li v-for="menu in menus" :key="menu" class="nav-item">
+        <li v-for="menu in menus" :key="menu" class="nav-item" @click="currentMenu = menu.name">
           <a aria-current="page" class="nav-link active" href="#" v-if="menu.name == currentMenu">
             <span v-html="menu.iconSvg" />
             {{ menu.name }}
